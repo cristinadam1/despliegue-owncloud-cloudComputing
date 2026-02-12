@@ -88,7 +88,7 @@ Queda así:
 
     sudo nano /etc/hosts 
 
-![cap5](/img/c5.png)
+![cap5](/owncloud-k8s/img/c5.png)
 
 ### Acceder a OwnCloud:
 Abro un navegador y accedemos a 
@@ -106,7 +106,7 @@ He comprobado que todos los pods del clúster están en ejecución utilizando el
 
 Los resultados muestran que todos los pods están en estado "Running", lo que indica que no hay problemas con el despliegue de los contenedores:
 
-![cap1](/img/c1.png)
+![cap1](/owncloud-k8s/img/c1.png)
 
 ### Verificación del servicio Ingress: 
 He revisado los servicios del clúster utilizando el comando
@@ -115,7 +115,7 @@ He revisado los servicios del clúster utilizando el comando
 
 Como podemos observar en la imagen, el servicio owncloud está corriendo correctamente en el puerto 80:30080
 
-![cap2](/img/c2.png)
+![cap2](/owncloud-k8s/img/c2.png)
 
 También, he comprobado que el recurso Ingress está configurado correctamente:
 
@@ -123,7 +123,7 @@ También, he comprobado que el recurso Ingress está configurado correctamente:
 
 El recurso Ingress para owncloud.local está configurado con la dirección IP correcta, como se muestra en el siguiente resultado: 
 
-![cap3](/img/c3.png)
+![cap3](/owncloud-k8s/img/c3.png)
 
 A pesar de que el servicio está correctamente expuesto y el Ingress está configurado, no podía acceder al servicio owncloud.local en el navegador. La URL http://owncloud.local no carga la aplicación.
 
@@ -137,7 +137,7 @@ después en mi navegador uso
 
 y comprobamos que funciona.
 
-![cap4](/img/c4.png)
+![cap4](/owncloud-k8s/img/c4.png)
 
 ## Referencias bibliográficas y recursos utilizados
 - Kubernetes Documentation: https://kubernetes.io/docs/
