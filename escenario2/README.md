@@ -27,7 +27,7 @@ Lo que hay que hacer es orquestar un sistema de contenedores que se encargue de:
 
 El diagrama que representa la arquitectura que se propone es el siguiente:
 
-![cap12](/img/c12.png)
+![cap12](/escenario2/img/c12.png)
 
 ## 3. Servicios desplegados y su configuración
 
@@ -60,7 +60,7 @@ He definido cuatro volúmenes persistentes: `owncloud_data`, `mariadb_data`, `ld
   - ldap_data: Almacena los datos de LDAP.
   - ldap_config: Almacena la configuración de LDAP.
 
-    ![cap15](/img/c15.png)
+    ![cap15](/escenario2/img/c15.png)
 
 #### **Servicios**
 
@@ -99,7 +99,7 @@ Para acceder a OwnCloud, abro un navegador y voy a:
 
     http://localhost
 
-  ![cap16](/img/c16.png)
+  ![cap16](/escenario2/img/c16.png)
     
 Para verificar HAProxy y su distribución de carga uso el comando:
 
@@ -134,14 +134,14 @@ Verifico que el LDAP esté cargado correctamente
 
     ldapsearch -x -H ldap://localhost -b dc=acmetech,dc=local -D "cn=admin,dc=acmetech,dc=local" -w StrongAdminPass123
 
-![cap4](/img/c4.png)
+![cap4](/escenario2/img/c4.png)
 
 Ahora integro LDAP con Owncloud siguiendo los pasos descritos en el escenario 1: 
 
-![cap5](/img/c5.png)
-![cap6](/img/c6.png)
-![cap7](/img/c7.png)
-![cap8](/img/c8.png)
+![cap5](/escenario2/img/c5.png)
+![cap6](/escenario2/img/c6.png)
+![cap7](/escenario2/img/c7.png)
+![cap8](/escenario2/img/c8.png)
 
 ### Estructura general de LDAP
 
@@ -179,7 +179,7 @@ En el archivo `groups.ldif`, he definido varios grupos, cada uno representado po
 
 Desde ownCloud, vemos que están los grupos creados:
 
-![cap13](/img/c13.png)
+![cap13](/escenario2/img/c13.png)
 
 #### 3. Usuarios
 En el archivo users.ldif, he definido varios usuarios, cada uno representado por un objeto que combina las clases `posixAccount` e `inetOrgPerson`. Estos objetos contienen información detallada sobre cada usuario, como su nombre, su grupo principal (a través del atributo `gidNumber`), su directorio home, su shell de inicio, su contraseña y su correo electrónico. 
@@ -216,7 +216,7 @@ Si nos vamos a
 
 Y observamos las estadísticas
 
-![cap14](/img/c14.png)
+![cap14](/escenario2/img/c14.png)
 
 ## Problemas encontrados
 Haciendo la comprobación con los comando 
